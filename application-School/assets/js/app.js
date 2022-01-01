@@ -1,7 +1,29 @@
 import {resuperationDonnees,saisiTextArea,carte}  from "./main.js"
 // Declaration des variables
 let donnees,apprenants = []
-let idSave = 0
+let idSave = JSON.parse(localStorage.getItem("id"))
+
+
+if(localStorage.getItem("id") == null)
+{
+    idSave = 0
+}
+if(localStorage)
+{
+    CreerCarte();
+}
+
+// fonction Creer carte
+function CreerCarte(){
+    document.querySelector(".btnmodification").style.visibility = "hidden"
+    let key = localStorage.length 
+    for (let i = 0; i < key-1; i++)
+    { 
+        let apprenants = JSON.parse(localStorage.getItem(i));
+        carte(apprenants);
+    }
+}
+
 
 // recuperation des donnees du formulaire
 document.querySelector('#form'),addEventListener('submit',(e)=>{
@@ -12,11 +34,11 @@ document.querySelector('#form'),addEventListener('submit',(e)=>{
     carte(donnees)
     document.querySelector('#form').reset()
     apprenants.push(donnees)
+
     // localStorage
-    // apprenantsLocal = localStorage;
     localStorage.setItem(idSave,JSON.stringify(donnees))
     idSave++
-        console.log(apprenants);
+    localStorage.setItem("id",idSave)
 })
 
 // Saisie TexteArea
