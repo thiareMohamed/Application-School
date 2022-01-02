@@ -122,7 +122,7 @@ function modifier(id)
 
     document.querySelector("#submit").style.visibility = "hidden"
     document.querySelector(".btnmodification").style.visibility = "visible"
-    localStorage.removeItem(id);
+    
 
     document.querySelector(".btnmodification").addEventListener('click',()=>{
         const carte = document.querySelector(`.card-${id}`)
@@ -149,5 +149,6 @@ function modifier(id)
         localStorage.setItem(id,JSON.stringify(apprenant))
         document.querySelector("#submit").style.visibility = "visible"
         document.querySelector(".btnmodification").style.visibility = "hidden"
+        localStorage.removeItem(id);
     })
 }

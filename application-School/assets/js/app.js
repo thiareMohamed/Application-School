@@ -1,4 +1,6 @@
 import {resuperationDonnees,saisiTextArea,carte}  from "./main.js"
+import {Affichage,enregistrer}  from "./supabase.js"
+
 // Declaration des variables
 let donnees,apprenants = []
 let idSave = JSON.parse(localStorage.getItem("id"))
@@ -26,7 +28,7 @@ function CreerCarte(){
 
 
 // recuperation des donnees du formulaire
-document.querySelector('#form'),addEventListener('submit',(e)=>{
+document.querySelector('#form .ajouter'),addEventListener('submit',(e)=>{
     e.preventDefault()
     console.log();
 
@@ -44,3 +46,22 @@ document.querySelector('#form'),addEventListener('submit',(e)=>{
 // Saisie TexteArea
 const textArea = document.querySelector('.bio-form');
 textArea.addEventListener('input',saisiTextArea)
+
+// Sauvegarder contenus
+document.querySelector(".sauvegarder").addEventListener('click',()=>{
+    if(localStorage.length == 0)
+    {
+        alert('Ajouter un apprenant')
+        return
+    }
+    else
+    {
+        for(let i = 0; i <= localStorage.length - 2; i++)
+        {
+            enregistrer(localStorage[i])
+        }
+        localStorage.clear()
+        window.location.assign("../../liste-Apprenant.html")
+    }
+
+})
