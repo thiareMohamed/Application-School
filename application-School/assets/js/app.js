@@ -61,7 +61,9 @@ document.querySelector(".sauvegarder").addEventListener('click',()=>{
             enregistrer(localStorage[i])
         }
         localStorage.clear()
-        window.location.assign("../../liste-Apprenant.html")
+        const cartes = document.querySelector(".listeCarte");
+        while (cartes.hasChildNodes()) {
+            cartes.removeChild(cartes.firstChild);
+          }
     }
-
 })
