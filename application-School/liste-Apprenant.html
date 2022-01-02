@@ -41,7 +41,30 @@
             </nav>
     </header>
 
-    <script src="assets/js/liste-apprenant.js"></script>
+    <main class="Apprenants container mt-5">
+        <div class="row mt-3"><h1>Liste des apprenants</h1></div>
+        <div class="apprenant">
+
+            <div class="col carte-${apprenant.niveau}">
+                <div class="card h-100 carte-app" id="${apprenant.id}">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted"></small>
+                    </div>
+                </div>  
+            </div>
+
+        </div>
+        <div class="liste-apprenant row mt-5 d-wrap row-cols-1 row-cols-md-3 g-4">
+
+        </div>
+
+    </main>
+    <script type="module" src="assets/js/liste-apprenant.js"></script>
 </body>
 
 </html>

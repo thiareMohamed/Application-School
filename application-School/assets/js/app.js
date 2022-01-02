@@ -1,5 +1,5 @@
 import {resuperationDonnees,saisiTextArea,carte}  from "./main.js"
-import {Affichage,enregistrer}  from "./supabase.js"
+import {enregistrer}  from "./supabase.js"
 
 // Declaration des variables
 let donnees,apprenants = []

@@ -4,7 +4,7 @@ const url_api = "https://gpyxjxqhqhxkpmjjlruz.supabase.co/rest/v1/Apprenant"
 // Affichage
 export function Affichage(carte)
 {
-    fetch("https://wcnhlgmpfqojryqbcxai.supabase.co/rest/v1/apprenantProvisoir",{
+    fetch(url_api,{
         method:"GET",
         headers:{
             apikey: key_api,
@@ -19,7 +19,6 @@ export function Affichage(carte)
         }
     })
 }
-
 
 // Enregistrement
 export function enregistrer(donnees)
