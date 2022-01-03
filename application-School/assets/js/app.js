@@ -30,8 +30,6 @@ function CreerCarte(){
 // recuperation des donnees du formulaire
 document.querySelector('#form .ajouter'),addEventListener('submit',(e)=>{
     e.preventDefault()
-    console.log();
-
     donnees = resuperationDonnees()
     carte(donnees)
     document.querySelector('#form').reset()
