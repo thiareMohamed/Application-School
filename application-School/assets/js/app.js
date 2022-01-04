@@ -58,10 +58,31 @@ document.querySelector(".sauvegarder").addEventListener('click',()=>{
         {
             enregistrer(localStorage[i])
         }
-        localStorage.clear()
+        
         const cartes = document.querySelector(".listeCarte");
         while (cartes.hasChildNodes()) {
             cartes.removeChild(cartes.firstChild);
-          }
+        } 
+        localStorage.clear()
+        idSave = 0
     }
+})
+
+// Range competence
+const maquette = document.querySelector('.maquette')
+const statique = document.querySelector('.pageStatique')
+const dynamique = document.querySelector('.pageDynamique')
+const backEnd = document.querySelector('.backEnd')
+
+maquette.addEventListener('input',()=>{
+    document.querySelector('#mq').innerHTML = maquette.value
+})
+statique.addEventListener('input',()=>{
+    document.querySelector('#ps').innerHTML = statique.value
+})
+dynamique.addEventListener('input',()=>{
+    document.querySelector('#pd').innerHTML = dynamique.value
+})
+backEnd.addEventListener('input',()=>{
+    document.querySelector('#be').innerHTML = backEnd.value
 })

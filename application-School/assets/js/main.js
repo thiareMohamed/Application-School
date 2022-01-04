@@ -59,7 +59,7 @@ export function carte(apprenant){
     "beforeend",
     `
             <div class="card-${id} mb-3">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="./assets/img/profil.png" style="width: 150px;" class="p-2 card-img-top" alt="...">
 
                 <div class="card-body">
                     <div class="d-flex">
