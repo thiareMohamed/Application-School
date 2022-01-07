@@ -1,0 +1,9 @@
+.listeCarte
+{
+      overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.carte-app
+{
+  cursor: pointer;
+}
