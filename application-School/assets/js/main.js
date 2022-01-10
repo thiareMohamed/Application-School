@@ -104,8 +104,8 @@ export function carte(apprenant){
 function supprimer(id)
 {
     localStorage.removeItem(id);
-    const carte = document.querySelector(`.card-${id}`)
-    carte.remove()
+    console.log(id);
+    document.querySelector(`.card-${id}`).remove()
 }
 // modification
 function modifier(id)
