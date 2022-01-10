@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Application</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/index.css">
+
+</head>
+
+<body>
+    <!-- NavBar -->
+    <header class="mb-3">
+        <nav class="navbar navbar-light  bg-danger fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">School Application</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Ajout Apprenant</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="liste-Apprenant.html">Liste des apprenants</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </nav>
+    </header>
+
+    <main class="container">
+      
+       <div class="bloc row">
+            <div class="col-12 col-lg-6">
+                <form class="was-validated mx-auto mt-5" id="form">
+                    <div class="row">
+                        <h1 class="mx-auto">
+                            Ajout apprenant
+                        </h1>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="text" class="form-control is-invalid nom" placeholder="Nom" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="text" class="form-control is-invalid prenom" placeholder="Prenom" required>
+                    </div>
+
+                    <div class="mb-3">
+                            <textarea class="form-control is-invalid bio-form bio" placeholder="Mettre votre bio" required></textarea>
+                        <div class="contenu-restant">
+                            Le nombre de caracteres <span class="nbr-restant">103</span> / 130
+                        </div>
+                    </div>
+                
+                    <div class="mb-3">
+                        <select class="form-select niveau" required aria-label="select example">
+                            <option value="">Niveau</option>
+                            <option value="Avancé">Avancé</option>
+                            <option value="Moyen">Moyen</option>
+                            <option value="Faible">Faible</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="customRange2" class="form-label">Maquetter Application</label>
+                        <input type="range" class="form-range maquette" min="1" max="100" id="customRange2">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="customRange2" class="form-label">Realisations d'une page statique</label>
+                        <input type="range" class="form-range pageStatique" min="1" max="100" id="customRange2">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="customRange2" class="form-label">Realisations d'une page dynamique</label>
+                        <input type="range" class="form-range pageDynamique" min="1" max="100" id="customRange2">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="customRange2" class="form-label">Developper une partie back-end</label>
+                        <input type="range" class="form-range backEnd" min="1" max="100" id="customRange2">
+                    </div>
+
+                    <div class="mb-3">
+                        <button class="btn btn-danger ajouter" id="submit">Ajouter apprenant</button>
+                        <button class="btnmodification btn btn-success">Modification</button>
+                    </div>
+
+                </form>
+            </div>
+            <!-- lISTE DES Apprenants -->
+            <div class="col-12 col-lg-6 listeApprenants mx-auto mt-5">
+                <h1>liste des Apprenants</h1>
+                <div class="mb-3">
+                    <button class="sauvegarder btn btn-success">Sauvegarder</button>
+                </div>
+                <div class="listeCarte">
+
+                </div>
+            </div>
+       </div>
+
+    </main>
+
+    <script src="dist/bundle.js"></script>
+</body>
+
+</html>
